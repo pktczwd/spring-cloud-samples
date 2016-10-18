@@ -14,10 +14,10 @@ import org.springframework.web.client.RestTemplate;
 @SpringBootApplication
 @EnableDiscoveryClient
 @EnableCircuitBreaker
-public class EurekaRibbonApplication {
+public class RibbonApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(EurekaRibbonApplication.class, args);
+        SpringApplication.run(RibbonApplication.class, args);
     }
 
     @Bean
