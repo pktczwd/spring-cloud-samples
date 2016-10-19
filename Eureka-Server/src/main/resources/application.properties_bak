@@ -1,7 +1,7 @@
 server.port=1111
-#不注册到注册中心
+#涓嶆敞鍐屽埌娉ㄥ唽涓績
 eureka.client.register-with-eureka=false
-#不从注册中心取数据
+#涓嶄粠娉ㄥ唽涓績鎷夊彇鏁版嵁
 eureka.client.fetch-registry=false
 eureka.client.serviceUrl.defaultZone=http://localhost:${server.port}/eureka/
 spring.output.ansi.enabled=DETECT
