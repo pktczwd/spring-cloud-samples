@@ -14,6 +14,9 @@ public class ComputeService {
     @Autowired
     private RestTemplate restTemplate;
 
+    //断路器更加详细的配置介绍
+    //https://github.com/Netflix/Hystrix/tree/master/hystrix-contrib/hystrix-javanica#configuration
+    //https://github.com/Netflix/Hystrix/wiki/Configuration
     @HystrixCommand(fallbackMethod = "addServiceFallback")
     public String addService() {
         return restTemplate.getForEntity("http://COMPUTE-SERVICE/add?a=10&b=20", String.class).getBody();
