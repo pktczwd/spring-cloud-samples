@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 /**
  * Created by pktczwd on 2016/10/13.
  */
-@FeignClient(value = "compute-service", fallback = ComputeClientHystrix.class)
+@FeignClient(value = "compute-service", fallback = ComputeClientHystrix.class, configuration = ComputeClientConfiguration.class)
 public interface ComputeClient {
 
     @RequestMapping(value = "/add", method = RequestMethod.GET)

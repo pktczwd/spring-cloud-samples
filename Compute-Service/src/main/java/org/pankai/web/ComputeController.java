@@ -28,5 +28,8 @@ public class ComputeController {
         return r;
     }
 
-
+    @RequestMapping(value = "/minus", method = RequestMethod.GET)
+    public Integer minus(@RequestParam Integer a, @RequestParam Integer b) {
+        return a - b;
+    }
 }
