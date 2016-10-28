@@ -27,3 +27,5 @@ hosts中加入如下两条记录:
 ```
 
 config项目中的git仓库配置需自行更改.
+
+bookmarks.html是通过chrome导出的一些链接,用于测试samples
