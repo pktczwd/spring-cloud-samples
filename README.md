@@ -14,7 +14,7 @@
 
 * turbine:706x
 
-* sleth:707x
+* sleuth:707x
 
 * xService:708x
 
