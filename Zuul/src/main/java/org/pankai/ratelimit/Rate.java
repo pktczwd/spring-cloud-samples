@@ -1,4 +1,4 @@
-package org.pankai.config;
+package org.pankai.ratelimit;
 
 /**
  * Represents a view of rate limit in a giving time for a user.

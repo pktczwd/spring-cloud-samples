@@ -1,4 +1,4 @@
-package org.pankai.config;
+package org.pankai.ratelimit;
 
 public interface RateLimiter {
     /**

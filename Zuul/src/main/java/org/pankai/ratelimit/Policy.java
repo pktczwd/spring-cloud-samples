@@ -1,4 +1,4 @@
-package org.pankai.config;
+package org.pankai.ratelimit;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -15,7 +15,7 @@ import java.util.List;
 @AllArgsConstructor
 public class Policy {
 
-    private Long refreshInternal = 60L;
+    private Long refreshInternal = 60L;//seconds
     private Long limit;
     private List<Type> type = new ArrayList<>();
 

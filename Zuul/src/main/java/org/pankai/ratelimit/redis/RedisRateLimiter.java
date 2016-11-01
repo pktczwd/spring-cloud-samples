@@ -1,8 +1,8 @@
-package org.pankai.config.redis;
+package org.pankai.ratelimit.redis;
 
-import org.pankai.config.Policy;
-import org.pankai.config.Rate;
-import org.pankai.config.RateLimiter;
+import org.pankai.ratelimit.Policy;
+import org.pankai.ratelimit.Rate;
+import org.pankai.ratelimit.RateLimiter;
 
 /**
  * Created by pktczwd on 2016/10/31.

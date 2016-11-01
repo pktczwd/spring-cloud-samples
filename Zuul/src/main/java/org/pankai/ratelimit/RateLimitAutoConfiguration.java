@@ -1,6 +1,8 @@
-package org.pankai.config;
+package org.pankai.ratelimit;
 
 import org.pankai.filter.RateLimitFilter;
+import org.pankai.ratelimit.local.LocalRateLimiter;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.cloud.netflix.zuul.filters.RouteLocator;
@@ -19,5 +21,14 @@ public class RateLimitAutoConfiguration {
     public RateLimitFilter rateLimitFilter(RateLimiter rateLimiter, RateLimitProperties rateLimitProperties, RouteLocator routeLocator) {
         return new RateLimitFilter(rateLimiter, rateLimitProperties, routeLocator);
     }
+
+    @ConditionalOnMissingBean(RateLimiter.class)
+    public static class LocalRateLimiterConfiguration {
+        @Bean
+        public RateLimiter localRateLimiter() {
+            return new LocalRateLimiter();
+        }
+    }
+
 
 }
