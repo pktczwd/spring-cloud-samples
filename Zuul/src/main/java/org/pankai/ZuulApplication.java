@@ -21,4 +21,5 @@ public class ZuulApplication {
     public AccessFilter accessFilter() {
         return new AccessFilter();
     }
+
 }

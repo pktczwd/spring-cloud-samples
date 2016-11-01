@@ -26,6 +26,10 @@ public class AccessFilter extends ZuulFilter {
         return "pre";
     }
 
+    /**
+     * 该值越小,越先执行.
+     * 源码用Collections.sort()方法对filter进行排序.
+     */
     @Override
     public int filterOrder() {
         return 0;
