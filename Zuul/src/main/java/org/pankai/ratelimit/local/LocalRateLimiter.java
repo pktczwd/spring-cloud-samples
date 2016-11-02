@@ -21,7 +21,7 @@ public class LocalRateLimiter implements RateLimiter {
     @Override
     public Rate consume(Policy policy, String key) {
         Long now = System.currentTimeMillis();
-        Long refreshInternal = policy.getRefreshInternal();
+        Long refreshInternal = policy.getRefreshInterval();
         RequestLimitValue value = values.get(key);
         if (value == null) {
             values.putIfAbsent(key, new RequestLimitValue(expirationTime(refreshInternal), new AtomicLong(0L)));

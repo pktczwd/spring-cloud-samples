@@ -44,7 +44,7 @@ public class RateLimitFilter extends ZuulFilter {
 
     @Override
     public int filterOrder() {
-        return -1;
+        return 11;
     }
 
     @Override

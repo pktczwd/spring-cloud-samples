@@ -15,5 +15,6 @@ public class RateLimitProperties {
 
     private Map<String, Policy> policies = new LinkedHashMap<>();
     private boolean enabled;
+    private String type = "local";
 
 }

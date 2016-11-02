@@ -15,7 +15,7 @@ import java.util.List;
 @AllArgsConstructor
 public class Policy {
 
-    private Long refreshInternal = 60L;//seconds
+    private Long refreshInterval = 60L;//seconds
     private Long limit;
     private List<Type> type = new ArrayList<>();
 
