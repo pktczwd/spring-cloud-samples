@@ -56,7 +56,7 @@ public class RateLimitAutoConfiguration {
     }
 
     @ConditionalOnMissingBean(RateLimiter.class)
-    @ConditionalOnProperty(name = "zuul.ratelimit.type", havingValue = "local")
+    @ConditionalOnProperty(name = "zuul.ratelimit.type", havingValue = "local", matchIfMissing = true)
     public static class LocalRateLimiterConfiguration {
         @Bean
         public RateLimiter localRateLimiter() {
