@@ -26,21 +26,6 @@
         </dependency>
     </dependencies>
 
-    <repositories>
-        <repository>
-            <id>aliyun-jcenter</id>
-            <name>aliyun-jcenter</name>
-            <url>http://maven.aliyun.com/nexus/content/repositories/jcenter</url>
-            <layout>default</layout>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
-    </repositories>
-
     <build>
         <finalName>${project.artifactId}</finalName>
         <plugins>
