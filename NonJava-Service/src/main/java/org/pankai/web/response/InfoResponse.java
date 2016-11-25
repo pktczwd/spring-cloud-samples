@@ -3,7 +3,7 @@ package org.pankai.web.response;
 /**
  * Created by pktczwd on 2016/11/24.
  */
-public class HealthResponse {
+public class InfoResponse {
 
     private String status;
 
