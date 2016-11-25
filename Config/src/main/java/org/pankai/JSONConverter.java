@@ -18,6 +18,7 @@ public class JSONConverter {
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         INSTANCE.setDateFormat(dateFormat);
         INSTANCE.configure(SerializationFeature.WRITE_ENUMS_USING_INDEX, true);
+        INSTANCE.configure(SerializationFeature.WRAP_ROOT_VALUE, true);
     }
 
     public static <T> T fromJson(Class<T> targetClass, String value, Class<?>... elementClasses) {
