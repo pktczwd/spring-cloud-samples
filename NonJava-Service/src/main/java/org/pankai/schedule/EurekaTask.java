@@ -103,7 +103,7 @@ public class EurekaTask implements DisposableBean {
         }
     }
 
-    @Scheduled(fixedRate = 60000000)
+    @Scheduled(fixedRate = 60000000, initialDelay = 1000)
     public void printApplications() {
         Applications applications = applicationsCache.getApplications();
         if (applications == null) {
