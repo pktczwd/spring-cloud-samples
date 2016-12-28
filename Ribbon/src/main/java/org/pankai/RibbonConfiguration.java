@@ -3,6 +3,8 @@ package org.pankai;
 import com.netflix.client.config.CommonClientConfigKey;
 import com.netflix.client.config.DefaultClientConfigImpl;
 import com.netflix.client.config.IClientConfig;
+import com.netflix.loadbalancer.IRule;
+import com.netflix.loadbalancer.RoundRobinRule;
 import org.springframework.cloud.netflix.ribbon.RibbonClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -31,5 +33,10 @@ public class RibbonConfiguration {
         config.set(CommonClientConfigKey.ReadTimeout, 2000);
         config.loadProperties("COMPUTE-SERVICE");
         return config;
+    }
+
+    @Bean
+    public IRule iRule() {
+        return new RoundRobinRule();
     }
 }
